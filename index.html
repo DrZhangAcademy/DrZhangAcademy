@@ -1,11 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. Zhang Academy</title>
+  <style>
+    :root {
+      --tsinghua-purple: #4b2e83;
+      --georgetown-blue: #041e42;
+      --georgetown-gray: #9fa2a4;
+      --gold-medal-gold: #d4af37;
+      --tiffany-blue: #81d8d0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--georgetown-gray);
+      color: #333;
+    }
+    header {
+      background-color: var(--tsinghua-purple);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: var(--georgetown-blue);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 10px 15px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--tiffany-blue);
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    section h2 {
+      color: var(--georgetown-blue);
+    }
+    .course-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .course-item {
+      padding: 10px;
+      border-left: 4px solid var(--gold-medal-gold);
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--georgetown-blue);
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: var(--gold-medal-gold);
+    }
+    footer {
+      background-color: #eeeeee;
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+    .quote {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 600px) {
+      .course-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to DrZhangAcademy.com!</h1>
-  <p>This is my website powered by GitHub Pages.</p>
-  <p>合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。———— 《老子·德经·第六十四章》</p>
+  <header>
+    <h1>Dr. Zhang Academy</h1>
+    <p>Inspiring excellence in education</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Welcome to Dr. Zhang Academy</h2>
+    <p>Inspiring excellence in math and beyond.</p>
+  </section>
+
+  <section id="courses">
+    <h2>Our Courses</h2>
+    <div class="course-list">
+      <div class="course-item">AMC 8/10/12 Preparation Courses</div>
+      <div class="course-item">Mathematical Olympiad Training (USA(J)MO)</div>
+      <div class="course-item">Competitional Math Courses fit for Students from:<br><small>USA, UK, New Zealand, Australia, Canada, Singapore, China, and Beyond</small></div>
+    </div>
+    <p style="font-size: 0.9em; color: #555; margin-top: 10px;">Please contact us for more information.</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </section>
+
+  <section id="extended">
+    <h2>Extended Services</h2>
+    <ul>
+      <li>Informatics Olympiad Courses for USACO (Coming Soon)</li>
+      <li>Academic Consulting (Coming Soon)</li>
+      <li>Tech Interview Prep (Coming Soon)</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Dr. Zhang</h2>
+    <p>Dr. Zhang has a strong background in mathematics education, academic research, and the technology industry. He is dedicated to helping students achieve excellence in their academic and personal pursuits.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <span id="email"></span></p>
+    <a href="mailto:DrZhangAcademy@gmail.com" class="btn">Email Us</a>
+    <script>
+      const e = "DrZhangAcademy" + "@" + "gmail.com";
+      document.getElementById("email").innerText = e;
+    </script>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dr. Zhang Academy. All rights reserved.</p>
+    <p class="quote">合抱之木，生于毫末；九层之台，起于累土；千里之行，始于足下。——《老子·德经·第六十四章》</p>
+  </footer>
 </body>
 </html>
